@@ -21,7 +21,6 @@ body{
 
 #menu-wrapper{
 	width:50%;
-	height: 35px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:20px;
@@ -40,7 +39,8 @@ body{
 	font-size:14pt;
 }
 #menu-wrapper .menu_current{
-	border-bottom:3px solid blue;
+	border-bottom:3px solid #77aaee;
+	border-top:3px solid #77aaee;
 }
 
 #language-switch{
@@ -53,8 +53,9 @@ body{
 	margin:0;
 }
 
-
-
+#language-switch .selected{
+	border:2px solid #77aaee;
+}
 
 
 #main-wrapper{
@@ -67,3 +68,41 @@ body{
 
 	background:#fff;
 }
+
+#main-wrapper p{
+	margin-left:80px;
+	margin-right:80px;
+	text-align:justify;
+}
+
+#main-wrapper h2{
+	border-bottom:3px solid #77aaee;
+	color:#69a;
+
+}
+
+#main-wrapper a{
+	color:#77aaee;
+	text-decoration:none;
+}
+
+#main-wrapper dt{
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+#main-wrapper dt::before{
+	content: "►";
+	display: block;
+	float: left;
+	width: 1.2em;
+	color: #77aaee;
+}
+
+#main-wrapper dd{
+	padding-top:6px;
+}
+
+
+
+

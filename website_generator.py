@@ -4,7 +4,7 @@
 
 import codecs,re,sys
 
-content_files=["index-content.html","publi-content.html","education-content.html"]
+content_files=["index-content.html","publi-content.html","cv-content.html","more-content.html"]
 
 
 
@@ -15,7 +15,6 @@ def load_content_files(fnames):
 
 	menu["fr"]=[]
 	menu["en"]=[]
-	previous=None
 	allowed_labels=["url","title_en","title_fr","content_en","content_fr"]
 	allowed_labels_string="|".join(allowed_labels)
 	for fname in fnames:
@@ -24,9 +23,10 @@ def load_content_files(fnames):
 			page_data["fr"]={}
 			page_data["en"]={}
 			url=""
+			previous=None
 			for l in f:
 				l=l.rstrip()
-				if l.startswith("#") or len(l)<1:
+				if l.startswith("#") or (len(l)<1 and previous==None):
 					continue
 				
 				if re.match("("+allowed_labels_string+") ?=",l):
@@ -68,13 +68,13 @@ def gen_page(language,url,menu,infos):
 		html+="""<p>
 		<a href=" """+url+"fr.html"+""" "><img src="french.ico" width="20px" alt="switch to french" ></img></a>
 		</p>
-		<p style="border:2px solid blue">
+		<p class="selected">
 		<a href=""><img src="english.png" width="20px" alt="switch to english" ></img></a>
 		</div>
 		</p>"""
 	else:
 		html+="""
-		<p style="border:2px solid blue">
+		<p class="selected">
 		<a href=""><img src="french.ico" width="20px" alt="switch to french" ></img></a>
 		</p><p>
 		<a href=" """+url+"en.html"+""" "><img src="english.png" width="20px" alt="switch to english" ></img></a>
