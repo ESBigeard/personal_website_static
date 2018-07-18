@@ -4,7 +4,7 @@
 
 import codecs,re,sys
 
-content_files=["index-content.html","publi-content.html","cv-content.html","more-content.html"]
+content_files=["index-content.html","publi-content.html","thesis-content.html","more-content.html"]
 
 
 
@@ -47,11 +47,11 @@ def load_content_files(fnames):
 	return out,menu
 
 def gen_page(language,url,menu,infos):
-	html="""
+	html=u"""
 	 <!DOCTYPE html>
 	<html>
 	<head>
-	<title>Bigeard NLP</title>
+	<title>Élise Bigeard</title>
 	<meta charset="UTF-8"> 
 	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
@@ -59,7 +59,7 @@ def gen_page(language,url,menu,infos):
 
 	<div id="top-wrapper">
 		<div id="title-wrapper">
-		<h1>Bigeard NLP</h2>
+		<h1>Élise Bigeard</h2>
 		</div>
 
 		<div id="language-switch">"""

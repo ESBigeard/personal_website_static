@@ -83,8 +83,9 @@ body{
 
 #main-wrapper a{
 	color:#77aaee;
-	text-decoration:none;
+	text-decoration:underline;
 }
+
 
 #main-wrapper dt{
 	padding-left: 1.2em;
