@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-"""script used to generate dynamic pages for my personal website bigeard-nlp"""
+"""script used to generate dynamic pages for my personal website bigeard-nlp
+attention, ne génère pas la page index.html, seulement indexen et indexfr. Il faut dupliquer manuellement indexen"""
 
 import codecs,re,sys
 
